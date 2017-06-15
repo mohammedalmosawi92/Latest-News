@@ -1,0 +1,43 @@
+<div class="container-fluid" ng-init="loadSportNews()">
+    <div class="row">
+        <div class="col-sm-3 col-xs-6">
+            <div ng-click="getFourFourTwo()">
+                <img src="./js/views/sport/fourfourtwo.png" class="img-responsive general">
+            </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div ng-click="getBBCSport()">
+                <img src="./js/views/sport/BBC-Sport.png" class="img-responsive general">
+            </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div ng-click="getESPN()">
+                <img src="./js/views/sport/ESPN.png" class="img-responsive general">
+            </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div ng-click="getSkySports()">
+                <img src="./js/views/sport/Sky-Sports.png" class="img-responsive general">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="loadArea text-center" ng-show="showLoading">
+                <img src="./js/ring.gif">
+            </div>
+            <div class="newsField" ng-repeat="news in sportList">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="{{news.url}}" target="_blank"><img ng-src="{{news.urlToImage}}" class="img-responsive article"></a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="{{news.url}}" class="title-link" target="_blank"><h2 class="title">{{news.title}}</h2></a>
+                        <div class="desc">{{news.description}}</div>
+                        <div class="continue"><a href="{{news.url}}" class="btn btn-primary" target="_blank">Continue Reading</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

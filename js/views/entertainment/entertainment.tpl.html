@@ -1,0 +1,43 @@
+<div class="container-fluid" ng-init="loadEntertainmentNews()">
+    <div class="row">
+        <div class="col-sm-3 col-xs-6">
+            <div ng-click="getWeekly()">
+                <img src="./js/views/entertainment/entertainment-weekly.png" class="img-responsive general">
+            </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div ng-click="getDailyMail()">
+                <img src="./js/views/entertainment/daily-mail-l.png" class="img-responsive general">
+            </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div ng-click="getMashable()">
+                <img src="./js/views/entertainment/58480f4ecef1014c0b5e4936.png" class="img-responsive general">
+            </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div ng-click="getLadBible()">
+                <img src="./js/views/entertainment/LB.png" class="img-responsive general">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="loadArea text-center" ng-show="showLoading">
+                <img src="./js/ring.gif">
+            </div>
+            <div class="newsField" ng-repeat="news in entertainmentList">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="{{news.url}}" target="_blank"><img ng-src="{{news.urlToImage}}" class="img-responsive article"></a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="{{news.url}}" class="title-link" target="_blank"><h2 class="title">{{news.title}}</h2></a>
+                        <div class="desc">{{news.description}}</div>
+                        <div class="continue"><a href="{{news.url}}" class="btn btn-primary" target="_blank">Continue Reading</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
