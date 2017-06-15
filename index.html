@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Latest News</title>
+    <link rel="icon" href="./js/news-icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href='//fonts.googleapis.com/css?family=Nokora' rel='stylesheet'>
+    <link rel="stylesheet" href="./js/style.css">
+</head>
+
+<body ng-app="news">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-full">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </button>
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <div class="Latest-News" href="#/">Latest News</div>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-side"><a href="#/general">General</a></li>
+                    <li class="navbar-side"><a href="#/sport">Sport</a></li>
+                    <li class="navbar-side"><a href="#/entertainment">Entertainment</a></li>
+                    <li class="navbar-side"><a href="#/technology">Technology</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div ng-view></div>
+    <div class="container-full footer">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="copyright">© 2017 Latest News</div>
+           </div>
+       </div>
+    </div>
+    <script src="https://code.angularjs.org/1.6.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/services/generalNews.js"></script>
+    <script src="./js/services/sportNews.js"></script>
+    <script src="./js/services/entertainmentNews.js"></script>
+    <script src="./js/services/technologyNews.js"></script>
+    <script src="./js/views/sport/sport.route.js"></script>
+    <script src="./js/views/general/general.route.js"></script>
+    <script src="./js/views/entertainment/entertainment.route.js"></script>
+    <script src="./js/views/technology/technology.route.js"></script>
+</body>
+
+</html>
